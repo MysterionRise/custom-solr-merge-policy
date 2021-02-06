@@ -1,0 +1,1 @@
+# custom-solr-merge-policy
