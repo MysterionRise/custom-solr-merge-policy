@@ -1,18 +1,27 @@
 package org.mystic;
 
 import org.apache.lucene.index.MergePolicy;
-import org.apache.solr.core.SolrResourceLoader;
-import org.apache.solr.index.MergePolicyFactory;
-import org.apache.solr.index.MergePolicyFactoryArgs;
-import org.apache.solr.schema.IndexSchema;
+import org.apache.lucene.index.MergeTrigger;
+import org.apache.lucene.index.SegmentCommitInfo;
+import org.apache.lucene.index.SegmentInfos;
 
-public class CustomMergePolicy extends MergePolicyFactory {
+import java.io.IOException;
+import java.util.Map;
 
-    protected CustomMergePolicy(SolrResourceLoader resourceLoader, MergePolicyFactoryArgs args, IndexSchema schema) {
-        super(resourceLoader, args, schema);
+public class CustomMergePolicy extends MergePolicy {
+
+    @Override
+    public MergeSpecification findMerges(MergeTrigger mergeTrigger, SegmentInfos segmentInfos, MergeContext mergeContext) throws IOException {
+        return null;
     }
 
-    public MergePolicy getMergePolicy() {
+    @Override
+    public MergeSpecification findForcedMerges(SegmentInfos segmentInfos, int i, Map<SegmentCommitInfo, Boolean> map, MergeContext mergeContext) throws IOException {
+        return null;
+    }
+
+    @Override
+    public MergeSpecification findForcedDeletesMerges(SegmentInfos segmentInfos, MergeContext mergeContext) throws IOException {
         return null;
     }
 }
