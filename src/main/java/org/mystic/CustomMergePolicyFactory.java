@@ -13,6 +13,6 @@ public class CustomMergePolicyFactory extends MergePolicyFactory {
     }
 
     public MergePolicy getMergePolicy() {
-        return new CustomMergePolicy();
+        return new ForceLogMergePolicy();
     }
 }
