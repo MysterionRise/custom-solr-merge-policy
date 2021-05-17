@@ -20,6 +20,6 @@ public class ForceLogMergePolicy extends CustomMergePolicy {
 
     @Override
     public MergeSpecification findForcedDeletesMerges(SegmentInfos segmentInfos, MergeContext mergeContext) throws IOException {
-        return null;
+        return super.findForcedDeletesMerges(segmentInfos, mergeContext);
     }
 }

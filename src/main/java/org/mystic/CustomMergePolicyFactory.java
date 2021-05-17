@@ -8,7 +8,7 @@ import org.apache.solr.schema.IndexSchema;
 
 public class CustomMergePolicyFactory extends MergePolicyFactory {
 
-    protected CustomMergePolicyFactory(SolrResourceLoader resourceLoader, MergePolicyFactoryArgs args, IndexSchema schema) {
+    public CustomMergePolicyFactory(SolrResourceLoader resourceLoader, MergePolicyFactoryArgs args, IndexSchema schema) {
         super(resourceLoader, args, schema);
     }
 
